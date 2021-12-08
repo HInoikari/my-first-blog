@@ -4,8 +4,8 @@
 <div class="post">
     <div class="date">
         <!--other options-->
-       <!-- <p>published: {{ post.published_date }}</p>-->
-        {{ post.published_date }}
+        <p>published: {{ post.published_date }}</p>
+        <!--{{ post.published_date }}-->
           </div>
     <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
     <p>{{ post.text|linebreaksbr }}</p>
