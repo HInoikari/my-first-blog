@@ -1,14 +1,25 @@
 {% extends "users/layout.html" %}
+{% load static %}
 
 {% block body %}
 {% if message %}
 <div>{{ message }}</div>
 {% endif %}
 
-<form action="{% url 'login' %}" method="post">
-  {% csrf_token %}
-  <input type="text", name="username", placeholder="Username">
-  <input type="password", name="password", placeholder="Password">
-  <input type="submit", value="Login">
-</form>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+        <form action="{% url 'login' %}" method="post">
+          {% csrf_token %}
+          <input class="fadeIn second", type="text", name="username", placeholder="Username">
+          <input class="fadeIn third", type="password", name="password", placeholder="Password">
+          <input class="fadeIn fourth", type="submit", value="Login">
+        </form>
+          <div id="formFooter">
+            <a class="underlineHover" href="">Forgot Password?</a>
+          </div>
+  </div>
+</div>
 {% endblock %}
+
+
+
