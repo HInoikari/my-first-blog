@@ -1,6 +1,7 @@
 {% extends "users/layout.html" %}
 {% load static %}
 
+
 {% block body %}
 {% if message %}
 <div>{{ message }}</div>
@@ -15,7 +16,7 @@
           <input class="fadeIn fourth", type="submit", value="Login">
         </form>
           <div id="formFooter">
-            <a class="underlineHover" href="">Forgot Password?</a>
+            <a class="underlineHover" href="{% url 'register' %}">Create a new account?</a>
           </div>
   </div>
 </div>
